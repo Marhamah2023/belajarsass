@@ -1,0 +1,11 @@
+// mixin
+@mixin tombol {
+    display: inline-block;
+    color: $warnakeenam;
+    background-color: $warnapertama;
+    border-radius: 2em;
+    text-decoration: none;
+    border: 0;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}

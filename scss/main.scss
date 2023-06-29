@@ -1,0 +1,108 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+// styles
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../3333449.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 60vmax;
+
+    &::before {
+        @media screen and (max-width: 992px){
+            opacity: 0.4;
+        }
+    }
+}
+
+// navigation / navbar
+.custom-nav {
+    .navbar-brand {
+        span {
+            color: $warnapertama;
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+    }
+
+    #navbarNav {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $warnapertama;
+                    font-weight: 500;
+                    margin-left: 2.4em;
+                    transition: .3s color ease;
+
+                    &:hover {
+                        color: darken($warnapertama, 30%);
+                    }
+                }
+                .sign-up-button {
+                    // background-color: $warnapertama;
+                    // color: $warnakeenam;
+                    // border-radius: 2em;
+                    // border: 0;
+                    // padding-left: 1.5em;
+                    // padding-right: 1.5em;
+                    @include tombol;
+                }
+            }
+        }
+    }
+}
+
+// custom-section
+.custom-section {
+    margin-top: 3.5em;
+    h2 {
+        font-weight: 700;
+        font-size: 4rem;
+        color: $warnapertama;
+        line-height: 1;
+    }
+
+    h6 {
+        line-height: 1;
+        color: $warnaketiga;
+    }
+
+    span {
+        font-size: 0.8rem;
+    }
+
+    .klik {
+        @include tombol;
+        margin-top: 0.9em;
+        border: 1px solid transparent;
+        transition: 0.5s ease;
+
+        &:hover {
+            color: $warnapertama;
+            border: 1px solid $warnapertama;
+            background-color: transparent;
+        }
+    }
+
+    .kedua {
+        line-height: 0.1;
+    }
+
+    p {
+        a {
+        font-size: 0.8rem;
+        line-height: 0.1;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        text-align: center;
+        h2,
+        h6,
+        a {
+            text-shadow: 1px 1px 2px rgba($warnakedua, 0.3);
+        }
+    }
+}
